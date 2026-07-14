@@ -36,14 +36,6 @@ const handleWheel = (e: WheelEvent) => {
    }
 };
 
-// Навигация свайпами на мобильных устройствах
-const swipeTarget = ref<HTMLElement | null>(null);
-useSwipe(swipeTarget, {
-   onSwipeLeft: () => readStore.handleNextPage(),
-   onSwipeRight: () => readStore.handlePrevPage(),
-   threshold: 50,
-});
-
 // Ключ для localStorage
 const getStorageKey = () => {
    if (!route.params.id || !appStore.userData?._id) return null;
