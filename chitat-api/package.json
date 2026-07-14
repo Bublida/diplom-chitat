@@ -6,7 +6,6 @@
   },
   "dependencies": {
     "@lingo-reader/fb2-parser": "^0.4.6",
-    "@types/cors": "^2.8.19",
     "@types/xmldom": "^0.1.34",
     "@xmldom/xmldom": "^0.9.10",
     "argon2": "^0.44.0",
@@ -20,11 +19,12 @@
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/express-fileupload": "^1.5.1",
     "@types/iconv-lite": "^0.0.1",
     "@types/jsonwebtoken": "^9.0.10",
-    "@types/node": "^25.2.3",
+    "@types/node": "^25.9.5",
     "@types/xml2js": "^0.4.14",
     "iconv-lite": "^0.7.2",
     "nodemon": "^3.1.11",
