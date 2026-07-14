@@ -2,15 +2,14 @@ import { UserModel } from "@models/user";
 import e from "express"
 import argon2 from "argon2";
 import jwt from "jsonwebtoken"
-import { logger } from "core/Logger";
+import { logger } from "./../../core/Logger";
 import { BookModel } from "@models/book";
 import { fb2ToMarkdown } from "@utils/fb2md";
 import path from "path";
 import fs from "fs/promises";
 import { extractFb2FromZip, isZipBuffer } from "@utils/zipParser";
-import QueryAPI from "core/Query";
+import QueryAPI from "./../../core/Query";
 import { ClassModel } from "@models/class";
-import mongoose from "mongoose";
 
 
 function authMiddleware(req: any, res: any, next: any) {

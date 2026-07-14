@@ -1,4 +1,4 @@
-import schemas from "config/schema";
+import schemas from "@config/schema";
 import { RequestConfig, FinalQuery, BuildFunctionMap, IParseRequestOptions } from "@config/types";
 import mongoose, { Model, ProjectionType } from "mongoose";
 import SendData from "./SendData";

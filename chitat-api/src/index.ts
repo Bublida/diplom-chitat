@@ -1,7 +1,7 @@
 import express, { Express } from 'express';
 import cors from 'cors';
 import { configDotenv } from 'dotenv';
-import { logger } from 'core/Logger';
+import { logger } from './core/Logger';
 import { join } from 'path';
 import connectDb from '@config/db';
 import { QueryRouter } from '@config/routers/query';

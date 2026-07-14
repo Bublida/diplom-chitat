@@ -1,4 +1,4 @@
-import SchemaVault from "core/SchemaVault";
+import SchemaVault from "./../core/SchemaVault";
 import { bookBuilders, BookModel } from "@models/book";
 import { classBuilders, ClassModel } from "@models/class";
 import { collectionBuilders, CollectionModel } from "@models/collection";

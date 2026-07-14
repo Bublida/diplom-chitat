@@ -1,4 +1,4 @@
-import { logger } from "core/Logger";
+import { logger } from "./../core/Logger";
 import mongoose from "mongoose";
 
 export default async function connectDb(uri: string | undefined){

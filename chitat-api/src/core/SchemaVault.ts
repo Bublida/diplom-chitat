@@ -1,4 +1,4 @@
-import { logger } from "core/Logger";
+import { logger } from "./Logger";
 import { SchemaRegisterData, SchemasMap } from "../config/types";
 import mongoose from "mongoose";
 

@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import { CommentModel } from "./comment";
-import { universalTags } from "tags";
+import { universalTags } from "./../tags";
 
 const additionalInfoSchema = new mongoose.Schema({
     lang: {

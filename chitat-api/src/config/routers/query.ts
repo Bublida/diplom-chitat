@@ -1,6 +1,6 @@
 import e from "express";
-import QueryAPI from "core/Query";
-import { logger } from "core/Logger";
+import QueryAPI from "./../../core/Query";
+import { logger } from "./../../core/Logger";
 import schemas from "@config/schema";
 
 const router = e.Router();
