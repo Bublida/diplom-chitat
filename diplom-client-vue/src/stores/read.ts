@@ -86,7 +86,7 @@ export const useReadStore = defineStore('read', () => {
 
    function highlightText(html: string, searchItems: Bookmark[], pageNum?: number): string {
       if (searchItems.length < 1) return html;
-      
+
       // Если указан номер страницы, фильтруем закладки по этой странице
       const validItems = searchItems.filter(item => {
          if (pageNum !== undefined) {
@@ -94,14 +94,14 @@ export const useReadStore = defineStore('read', () => {
          }
          return item.tip && item.tip.length >= 2;
       });
-      
+
       if (validItems.length === 0) return html;
 
       // Сортируем по длине (длинные сначала, чтобы не ломать вложенные)
       validItems.sort((a, b) => b.tip.length - a.tip.length);
 
       let result = html;
-      
+
       // Проходим по каждой закладке и заменяем текст на span
       for (const item of validItems) {
          const { tip, comment, id } = item;
@@ -110,10 +110,10 @@ export const useReadStore = defineStore('read', () => {
          const escapedTip = escapeRegExp(tip);
          const commentEscaped = (comment || '').replace(/"/g, '&quot;');
          const idEscaped = id || '';
-         
+
          // Создаем regex для поиска
          const regex = new RegExp(escapedTip, 'g');
-         
+
          // Заменяем все совпадения
          let firstReplacementDone = false;
          result = result.replace(regex, (match) => {
@@ -126,12 +126,12 @@ export const useReadStore = defineStore('read', () => {
             if (firstReplacementDone) {
                return match;
             }
-            
+
             firstReplacementDone = true;
             return `<span class="reader-tip" data-reader-tip="${commentEscaped}" data-tip-id="${idEscaped}">${match}</span>`;
          });
       }
-      
+
       return result;
    }
 
@@ -169,23 +169,23 @@ export const useReadStore = defineStore('read', () => {
          const splitter = new HtmlPageSplitter({ classes })
 
          const pagesContent: string[] = [];
-         if(tableOfContents.value && tableOfContents.value?.length > 0){
+         if (tableOfContents.value && tableOfContents.value?.length > 0) {
             tableOfContents.value = [];
          }
          for await (const pageHtml of splitter.split(htmlToProcess)) {
             pagesContent.push(pageHtml);
             pushTableOfContents(pageHtml, pagesContent.length);
          }
-         
+
          // Выделяем закладки в каждой странице
          for (let i = 0; i < pagesContent.length; i++) {
             const pageNum = i + 1;
             const pageTips = tips.value.filter(tip => tip.pagelink === pageNum);
             if (pageTips.length > 0) {
-               pagesContent[i] = highlightText(pagesContent[i], pageTips, pageNum);
+               pagesContent[i] = highlightText(pagesContent[i] as string, pageTips, pageNum);
             }
          }
-         
+
          fetchedHTML.value = pagesContent.join('');
          totalPages.value = pagesContent.length;
          pages.value = pagesContent;
