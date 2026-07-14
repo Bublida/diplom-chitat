@@ -12,7 +12,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "types": ["node"],
     "paths": {
       "@models/*": ["./src/models/*"],
       "@routes/*": ["./src/routes/*"],
