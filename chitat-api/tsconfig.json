@@ -5,21 +5,20 @@
     "lib": ["ES2022"],
     "outDir": "./dist",
     "rootDir": "./src",
-    "baseUrl": "./src",             
-    "moduleResolution": "node",  
-    "ignoreDeprecations": "6.0",   
+    "moduleResolution": "bundler",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "paths": {
-      "@models/*": ["models/*"],
-      "@routes/*": ["routes/*"],
-      "@config/*": ["config/*"],
-      "@utils/*": ["utils/*"]
+      "@models/*": ["./src/models/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@config/*": ["./src/config/*"],
+      "@utils/*": ["./src/utils/*"],
+      "core/*": ["./src/core/*"]
     }
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }
