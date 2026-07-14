@@ -27,7 +27,7 @@ connectDb(URI);
 // Настройки приложения
 app
   .use(cors({
-    origin: "https://diplom-chitat-259yxz9s5-bublead.vercel.app/",
+    origin: "*",
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
