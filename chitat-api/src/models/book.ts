@@ -207,7 +207,7 @@ const bookBuilders = {
         if (author) {
             matchStage.author = new mongoose.Types.ObjectId(author);
         }
-        const pipeline = [];
+        const pipeline: any = [];
         if (Object.keys(matchStage).length > 0) {
             pipeline.push({ $match: matchStage });
         }
