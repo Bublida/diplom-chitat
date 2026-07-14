@@ -1,0 +1,13 @@
+@font-face {
+   font-family: 'Mulish';
+   src:
+      url('/src/assets/fonts/Mulish-VariableFont_wght.ttf');
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'MontserratAlternates';
+   src:
+      url('/src/assets/fonts/MontserratAlternates-Regular.ttf') format('truetype');
+   font-display: swap;
+}

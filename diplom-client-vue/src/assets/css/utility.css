@@ -1,0 +1,29 @@
+.ui-border {
+    @apply px-1.5 py-1 rounded-xl border-2;
+    border-color: var(--color-base-200);
+    background: var(--color-base-100);
+
+    &.clickable {
+        @apply hover:bg-(--color-base-200) transition;
+    }
+}
+
+.scroll-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.color-auto {
+    color: var(--color-content);
+    fill: var(--color-content);
+}
+
+.color {
+    outline-color: var(--color-main-text);
+    color: var(--color-main-text);
+    fill: var(--color-main-text);
+}

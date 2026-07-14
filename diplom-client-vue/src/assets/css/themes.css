@@ -1,0 +1,99 @@
+/* Светлая тема */
+:root {
+   --color-base-100: var(--color-zinc-50);
+   --color-base-200: var(--color-zinc-300);
+   --color-base-300: var(--color-zinc-400);
+   --color-content: var(--color-zinc-900);
+
+   /* Остальной цвет для текста (всегда светлый) */
+   --color-main-text: var(--color-zinc-50);
+
+   /* Accent цвета */
+   --color-accent: var(--color-blue-500);
+   --color-accent-200: var(--color-blue-600);
+   --color-accent-content: white;
+
+   --color-danger: var(--color-red-500);
+   --color-danger-hover: var(--color-red-500);
+
+   /* Подписки */
+   --color-free: var(--color-neutral-400);
+   --color-free-hover: var(--color-neutral-600);
+
+   --color-standard: linear-gradient(to right bottom, #FFD230, #FF4D00 70%);
+   --color-standard-flat: #ff9e30;
+   --color-standard-hover: linear-gradient(to top, rgba(0, 0, 0, 0.05)), var(--color-стандарт);
+
+   --color-teach: linear-gradient(to right bottom, #FFEA00, #00FF95 70%);
+   --color-teach-flat: rgb(0, 255, 85);
+   --color-teach-hover: linear-gradient(to top, rgba(0, 0, 0, 0.05)), var(--color-ученик);
+
+   --color-premium: linear-gradient(to right bottom, #d900ff, #00bfff);
+   --color-premium-flat: #9d00ff;
+   --color-premium-hover: linear-gradient(to top, rgba(0, 0, 0, 0.05)), var(--color-премиум);
+
+   --color-reader: beige;
+
+   .c-teach {
+      background: var(--color-teach);
+   }
+
+   .c-premium {
+      background: var(--color-premium);
+   }
+
+   .c-standard {
+      background: var(--color-standard);
+   }
+
+   .c-free {
+      background: var(--color-free);
+   }
+
+   /* Предустановки темы */
+   --active-background: black;
+
+   --font-prop: 'MontserratAlternates',
+   'Courier New',
+   Courier,
+   monospace;
+   --font-title: 'Mulish',
+   'Courier New',
+   Courier,
+   monospace;
+
+   .prop {
+      font-family: var(--font-prop);
+   }
+
+   .title {
+      @apply italic font-black;
+      font-family: var(--font-title);
+   }
+
+   .iconify {
+      color: var(--color-content);
+   }
+
+   .c-free,
+   .c-premium,
+   .c-standard,
+   .c-teach {
+      color: var(--color-main-text);
+   }
+}
+
+/* Тёмная тема */
+:root.dark {
+   --color-base-100: var(--color-gray-900);
+   --color-base-200: var(--color-gray-700);
+   --color-base-300: var(--color-gray-600);
+   --color-content: var(--color-gray-200);
+
+   --color-reader: var(--color-slate-900);
+   
+   /* Accent цвета для темной темы */
+   --color-accent: var(--color-blue-400);
+   --color-accent-200: var(--color-blue-500);
+   --color-accent-content: white;
+}

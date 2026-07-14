@@ -1,0 +1,93 @@
+/* Fade */
+.fade-enter-active,
+.fade-leave-active {
+   transition: opacity 0.3s ease, transform 0.3s ease, width 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+   opacity: 0;
+   width: 0;
+   transform: translateY(-10px);
+}
+
+.fade-enter-to,
+.fade-leave-from {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+/* Show */
+.show-enter-active,
+.show-leave-active {
+   transition: opacity 0.3s ease, translate 0.3s ease;
+}
+
+.show-enter-from,
+.show-leave-to {
+   opacity: 0;
+   @apply translate-x-3;
+}
+
+.show-enter-to,
+.show-leave-from {
+   opacity: 1;
+   @apply translate-x-0;
+}
+
+/* Show-down */
+.showdown-enter-active,
+.showdown-leave-active {
+   transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+.showdown-enter-from,
+.showdown-leave-to {
+   opacity: 0;
+   @apply h-0;
+}
+
+.showdown-enter-to,
+.showdown-leave-from {
+   opacity: 1;
+   @apply h-10;
+}
+
+/* Swipe */
+.swipe-enter-active,
+.swipe-leave-active {
+   transition: all 0.5s ease;
+}
+
+.swipe-enter-from {
+   opacity: 0;
+   @apply scale-50 absolute;
+}
+
+.swipe-leave-to {
+   opacity: 0;
+   @apply scale-150 absolute;
+}
+
+.swipe-move {
+   position: absolute;
+   top: 0;
+}
+
+/* Fade-in-out */
+.fadein-enter-active,
+.fadein-leave-active {
+   transition: opacity 1s ease-in-out, scale 1s ease-in-out;
+}
+
+.fadein-enter-from,
+.fadein-leave-to {
+   opacity: 0;
+   /* scale: 10vh; */
+}
+
+.fadein-enter-to,
+.fadein-leave-from {
+   opacity: 1;
+   /* scale: 20vh; */
+}
